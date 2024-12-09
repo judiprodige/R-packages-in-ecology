@@ -5,88 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Packages R pour l'Écologie</title>
     <style>
+        /* Définition des couleurs du thème */
+        :root {
+            --primary-color: #006d77;
+            --secondary-color: #83c5be;
+            --background-color: #edf6f9;
+            --text-color: #023047;
+            --accent-color: #ffddd2;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
         }
-        h1, h2, h3 {
-            color: #00509e;
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        section {
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2, h3 {
+            color: var(--primary-color);
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
         code {
-            background-color: #e9ecef;
-            padding: 2px 4px;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 3px 5px;
             border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
         }
-        ul {
-            margin-bottom: 20px;
-        }
+
         a {
-            color: #00509e;
+            color: var(--secondary-color);
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: var(--primary-color);
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Packages R Usuels en Écologie</h1>
-    <p>Voici une présentation des principaux packages R utilisés pour l'analyse de données écologiques, la modélisation et la visualisation.</p>
+    <header>
+        <h1>Packages R Usuels en Écologie</h1>
+    </header>
 
-    <h2>1. Données et Analyse Statistique</h2>
-    <ul>
-        <li><strong><code>vegan</code></strong> : Analyse multivariée, ordination, études de biodiversité.</li>
-        <li><strong><code>ade4</code></strong> : Analyse exploratoire des données écologiques.</li>
-        <li><strong><code>lme4</code></strong> : Modèles linéaires à effets mixtes pour l'analyse de données complexes.</li>
-    </ul>
+    <section>
+        <p>Voici une présentation des principaux packages R utilisés pour l'analyse de données écologiques, la modélisation et la visualisation.</p>
 
-    <h2>2. Écologie Spatiale</h2>
-    <ul>
-        <li><strong><code>sp</code></strong> : Gestion des données géographiques.</li>
-        <li><strong><code>raster</code></strong> : Analyse de données raster.</li>
-        <li><strong><code>sf</code></strong> : Gestion et visualisation des données spatiales vectorielles.</li>
-    </ul>
+        <h2>1. Données et Analyse Statistique</h2>
+        <ul>
+            <li><strong><code>vegan</code></strong> : Analyse multivariée, ordination, études de biodiversité.</li>
+            <li><strong><code>ade4</code></strong> : Analyse exploratoire des données écologiques.</li>
+            <li><strong><code>lme4</code></strong> : Modèles linéaires à effets mixtes pour l'analyse de données complexes.</li>
+        </ul>
 
-    <h2>3. Dynamique des Populations et Modélisation</h2>
-    <ul>
-        <li><strong><code>popbio</code></strong> : Modélisation de la dynamique des populations.</li>
-        <li><strong><code>RMark</code></strong> : Analyse de capture-recapture.</li>
-        <li><strong><code>deSolve</code></strong> : Résolution d'équations différentielles pour modélisation dynamique.</li>
-    </ul>
+        <h2>2. Écologie Spatiale</h2>
+        <ul>
+            <li><strong><code>sp</code></strong> : Gestion des données géographiques.</li>
+            <li><strong><code>raster</code></strong> : Analyse de données raster.</li>
+            <li><strong><code>sf</code></strong> : Gestion et visualisation des données spatiales vectorielles.</li>
+        </ul>
 
-    <h2>4. Analyse Phylogénétique et Diversité</h2>
-    <ul>
-        <li><strong><code>ape</code></strong> : Analyse des données phylogénétiques.</li>
-        <li><strong><code>phyloseq</code></strong> : Analyse des microbiomes et de la diversité.</li>
-        <li><strong><code>picante</code></strong> : Diversité phylogénétique et écologique.</li>
-    </ul>
+        <h2>3. Dynamique des Populations et Modélisation</h2>
+        <ul>
+            <li><strong><code>popbio</code></strong> : Modélisation de la dynamique des populations.</li>
+            <li><strong><code>RMark</code></strong> : Analyse de capture-recapture.</li>
+            <li><strong><code>deSolve</code></strong> : Résolution d'équations différentielles pour modélisation dynamique.</li>
+        </ul>
 
-    <h2>5. Écologie Fonctionnelle</h2>
-    <ul>
-        <li><strong><code>FD</code></strong> : Indices de diversité fonctionnelle.</li>
-        <li><strong><code>traitdataform</code></strong> : Gestion des bases de données de traits fonctionnels.</li>
-    </ul>
+        <h2>4. Analyse Phylogénétique et Diversité</h2>
+        <ul>
+            <li><strong><code>ape</code></strong> : Analyse des données phylogénétiques.</li>
+            <li><strong><code>phyloseq</code></strong> : Analyse des microbiomes et de la diversité.</li>
+            <li><strong><code>picante</code></strong> : Diversité phylogénétique et écologique.</li>
+        </ul>
 
-    <h2>6. Cartographie et Visualisation</h2>
-    <ul>
-        <li><strong><code>ggplot2</code></strong> : Graphiques personnalisés et publication-ready.</li>
-        <li><strong><code>tmap</code></strong> : Cartographie thématique interactive.</li>
-        <li><strong><code>leaflet</code></strong> : Visualisation dynamique des données géographiques.</li>
-    </ul>
+        <h2>5. Écologie Fonctionnelle</h2>
+        <ul>
+            <li><strong><code>FD</code></strong> : Indices de diversité fonctionnelle.</li>
+            <li><strong><code>traitdataform</code></strong> : Gestion des bases de données de traits fonctionnels.</li>
+        </ul>
 
-    <h3>Exemple d'Analyse</h3>
-    <p>Pour une analyse complète en écologie, combinez plusieurs packages :</p>
-    <ol>
-        <li>Importez vos données avec <code>read.csv()</code>.</li>
-        <li>Nettoyez et préparez-les avec <code>dplyr</code>.</li>
-        <li>Calculez la diversité fonctionnelle avec <code>FD</code>.</li>
-        <li>Créez des graphiques avec <code>ggplot2</code>.</li>
-        <li>Analysez la distribution spatiale avec <code>raster</code> et <code>sf</code>.</li>
-    </ol>
+        <h2>6. Cartographie et Visualisation</h2>
+        <ul>
+            <li><strong><code>ggplot2</code></strong> : Graphiques personnalisés et publication-ready.</li>
+            <li><strong><code>tmap</code></strong> : Cartographie thématique interactive.</li>
+            <li><strong><code>leaflet</code></strong> : Visualisation dynamique des données géographiques.</li>
+        </ul>
 
-    <p>Pour plus d'informations, visitez la documentation officielle de chaque package.</p>
+        <h3>Exemple d'Analyse</h3>
+        <p>Pour une analyse complète en écologie, combinez plusieurs packages :</p>
+        <ol>
+            <li>Importez vos données avec <code>read.csv()</code>.</li>
+            <li>Nettoyez et préparez-les avec <code>dplyr</code>.</li>
+            <li>Calculez la diversité fonctionnelle avec <code>FD</code>.</li>
+            <li>Créez des graphiques avec <code>ggplot2</code>.</li>
+            <li>Analysez la distribution spatiale avec <code>raster</code> et <code>sf</code>.</li>
+        </ol>
+
+        <p>Pour plus d'informations, visitez la documentation officielle de chaque package.</p>
+    </section>
+
+    <footer>
+        © 2024 - Packages R pour l'Écologie
+    </footer>
 </body>
 </html>
