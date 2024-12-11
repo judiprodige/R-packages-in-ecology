@@ -88,6 +88,33 @@
                 font-size: 16px;
             }
         }
+        /* Style pour le conteneur du logo */
+        .logo-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2c6e49, #97bc62);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style pour l'intérieur du logo */
+        .logo-container svg {
+            width: 50%;
+            height: 50%;
+        }
+
+        /* Initiales ou texte */
+        .logo-text {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -153,7 +180,18 @@
     </section>
 
     <footer>
-        © 2024 - Packages R pour l'Écologie
+        © 2024 - Judicaël OSSE
     </footer>
+
+    <!-- Conteneur du logo -->
+    <div class="logo-container">
+        <!-- Logo en SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="4" />
+            <text x="50" y="55" text-anchor="middle" font-size="20" fill="white" font-family="Arial" font-weight="bold">
+                JO
+            </text>
+        </svg>
+    </div>
 </body>
 </html>
