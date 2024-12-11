@@ -101,19 +101,14 @@
             justify-content: center;
             align-items: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden; /* Pour s'assurer que l'image reste dans le cercle */
         }
 
-        /* Style pour l'intérieur du logo */
-        .logo-container svg {
-            width: 50%;
-            height: 50%;
-        }
-
-        /* Initiales ou texte */
-        .logo-text {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: white;
+        /* Image à l'intérieur du logo */
+        .logo-container img {
+            width: 100%; /* L'image remplit le conteneur */
+            height: 100%;
+            object-fit: cover; /* Ajuste l'image pour qu'elle s'adapte */
         }
     </style>
 </head>
@@ -185,13 +180,8 @@
 
     <!-- Conteneur du logo -->
     <div class="logo-container">
-        <!-- Logo en SVG -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="4" />
-            <text x="50" y="55" text-anchor="middle" font-size="20" fill="white" font-family="Arial" font-weight="bold">
-                JO
-            </text>
-        </svg>
+        <!-- Image au centre -->
+        <img src="logo.jpg" alt="Logo Image">
     </div>
 </body>
 </html>
